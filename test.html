@@ -19,35 +19,51 @@
 </head>
 
 <body>
-    <div id="container" style="width:50%; height:300px;"></div>
+    <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
     <script>
-        $(function () { 
-    $('#container').highcharts({
-        chart: {
-            type: 'bar'
-        },
+       var options = {
+
+    chart: {
+
+        renderTo: 'container',
+
+        defaultSeriesType: 'line'
+
+    },
+
+    title: {
+
+        text: 'Temperature monitoring'
+
+    },
+    yAxis: {
+
         title: {
-            text: 'Macronutrient Breakdown'
-        },
-        xAxis: {
-            categories: ['Protein', 'Carbs', 'Fats']
-        },
-        yAxis: {
-            title: {
-                text: 'grams'
-            }
-        },
-        series: [{
-            name: 'Jason',
-            data: [180, 60, 50]
-        }, {
-            name: 'Sherrie',
-            data: [98, 40, 80]
-        }]
-    });
+            text: 'Celcius'
+        }
+
+    },
+
+    series: []
+
+};
+
+var data = "1355417598678,22.25\n1355417620144,22.25\n1355417625616,22.312\n1355417630851,22.375\n1355417633906,22.437\n1355417637134,22.437\n1355417641239,22.5\n1355417641775,22.562\n1355417662373,22.125\n1355417704368,21.625";
+var lines = data.split('\n');
+lines = lines.map(function(line) {
+    var data = line.split(',');
+    data[1] = parseFloat(data[1]);
+    return data;
 });
 
+var series = {
+    data: lines,
+    name: 'serie1'
+};
+options.series.push(series);
+
+var chart = new Highcharts.Chart(options);
     </script>
 </body>
 </html>   
