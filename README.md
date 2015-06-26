@@ -1,4 +1,4 @@
-# trackmyweight
+# TrackMyWeight
 A project designed to experiment with d3.js and highcharts.js.
 
 This application can pivot to:
