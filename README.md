@@ -5,3 +5,5 @@ This application can pivot to:
 * Track weight (lbs. for now) over time
 * Track macros over time 
 * Track compound lifts
+
+##Resources##
