@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <div id="container" style="width:50%; height:300px;"></div>
+    <div id="container" style="width:100%; height:300px; vertical-align: middle;"></div>
 
     <script>
         $(function () { 
@@ -49,5 +49,24 @@
 });
 
     </script>
+    <main class="island animated flipInX" role="content">
+        <h1 class="site-title">TrackMyWeight</h1>
+        <span class="beta subhead">Track your weight with beautiful data visualization.</span>
+        <div class="wrap">
+            <form>
+                <input type="text" id="weight" class="input" placeholder="Enter your weight.">
+                <button class="butt" type="submit">Track My Weight</button>
+            </form>
+            <h1 id="message"></h1>
+            <script>
+
+$( document ).ready(function() {
+    $('#weight').change(function(){
+        $('#message').html($('#weight').val());
+    });
+});
+            </script>
+        </div>
+    </main>
 </body>
 </html>   
