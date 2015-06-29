@@ -13,20 +13,20 @@
 
     <!-- JS Stuff -->
     <script type="text/javascript" src="http://d3js.org/d3.v3.js"></script>
-    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
     <script src="http://code.highcharts.com/highcharts.js"></script>
     <script src="http://code.highcharts.com/modules/exporting.js"></script>
 </head>
 
 <body>
-    <main class="island animated flipInX" role="content">
-        <div id="container"></div>
+    <main class="island animated zoomIn" role="content">
+        <div id="container" style="width: 300%; height:400px; vertical-align: middle;"></div>
             <script>
             $(function () {
                 $('#container').highcharts({
 
                     series: [{
-                        data: []
+                        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
                     }],
                     title: {
                         text: 'Weight Tracker'
