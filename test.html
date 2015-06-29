@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <div id="container" style="width:100%; height:300px; vertical-align: middle;"></div>
+    <div id="container" style="width:60%; height:300px;"></div>
 
     <script>
         $(function () { 
@@ -29,6 +29,15 @@
         },
         title: {
             text: 'Macronutrient Breakdown'
+        },
+        credits: {
+            enabled: false
+        },
+        legend: {
+            align: 'right',
+            verticalAlign: 'middle',
+            layout: 'vertical',
+            padding: 12,
         },
         xAxis: {
             categories: ['Protein', 'Carbs', 'Fats']
@@ -49,24 +58,5 @@
 });
 
     </script>
-    <main class="island animated flipInX" role="content">
-        <h1 class="site-title">TrackMyWeight</h1>
-        <span class="beta subhead">Track your weight with beautiful data visualization.</span>
-        <div class="wrap">
-            <form>
-                <input type="text" id="weight" class="input" placeholder="Enter your weight.">
-                <button class="butt" type="submit">Track My Weight</button>
-            </form>
-            <h1 id="message"></h1>
-            <script>
-
-$( document ).ready(function() {
-    $('#weight').change(function(){
-        $('#message').html($('#weight').val());
-    });
-});
-            </script>
-        </div>
-    </main>
 </body>
 </html>   
